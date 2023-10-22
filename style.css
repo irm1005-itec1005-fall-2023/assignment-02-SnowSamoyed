@@ -4,11 +4,14 @@
  */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #fb8500;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
-  align-items: center;
+
+  font-family: Helvetica,;
+  background: rgb(0, 0, 0);
+  color: aliceblue;
+  /* background: linear-gradient(360deg, rgb(55, 83, 131) 0%, #98bdce 100%); */
 }
 
 h1 {
@@ -17,3 +20,298 @@ h1 {
   text-align: center;
   color: #023047;
 }
+
+/* The entire header starts here  -------------------------------------------------*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  margin-bottom: auto;
+  /* background-color: #f3f3f3; */
+}
+
+/* Logo start -------------------------------------------*/
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  padding: 1rem;
+}
+
+.logo-wrapper img {
+  width: 1.2rem;
+  height: 2rem;
+}
+
+.logo-wrapper {
+  color: rgb(255, 255, 255);
+}
+/* Logo End --------------------------------------------*/
+
+/* All the links' style are unitfied here */
+header li {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+header li a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+header li a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+/* Link unified ends */
+
+
+.Info-links {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.Account-Links {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+  padding: 1rem;
+}
+/* Header ends -------------------------------------------------*/
+
+
+/* Main start----------------------------------------------------------------------*/  
+
+/* Hero start---------------------------------------------------*/
+main {
+
+}
+
+.hero {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  /* height: 40rem; */
+  margin-bottom: auto;
+  margin-top: 0;
+
+  object-fit: cover; 
+  object-position: 60% 0;
+}
+
+.hero h1 {
+  position: absolute;
+  
+  top: 5%;
+  right: 1%;
+  /* transform: translate(-50%, -50%); */
+
+  width: 40rem;
+  font-size: 10rem;
+  text-align: end;
+
+  color: rgb(36, 35, 35);
+}
+
+.hero p {
+  position: absolute;
+  top: 90%;
+  right: 0%;
+  /* transform: translate(-50%, -50%); */
+
+  width: 20rem;
+  font-size: 1.5rem;
+
+  color: rgb(37, 55, 99)
+}
+/* Hero end ------------------------------------------*/
+
+/* Catogory Gallery start ---------------------------*/
+.gallery h2 {
+  text-align: center;
+  height: 3rem;
+  margin-bottom: 8rem;
+  font-size: 5rem;
+}
+
+.gallery-link {
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+  grid-template-rows: repeat(3, 15rem);
+  row-gap: 2rem;
+  column-gap: 2rem;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  justify-content: center;
+}
+
+.gallery-link .container-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery-link .container-2 {
+  grid-column: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery-link .container-3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+}
+
+.gallery-link .container-4 {
+  grid-row: 3;
+  grid-column: 3;
+}
+
+
+.gallery-link .container-1, .container-2, .container-3, .container-4 {
+  background-color: rgb(26, 52, 96);
+  
+  position: relative;
+  filter: grayscale(100%);
+}
+
+.gallery-link p {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  color: aliceblue;
+} 
+
+.gallery-link .container-1 p {
+  top: 45%;
+  left: 45%;
+}
+
+.gallery-link .container-2 p {
+  top: 45%;
+  left: 35%;
+}
+
+.gallery-link .container-3 p {
+  top: 40%;
+  left: 40%;
+  color: black;
+}
+
+.gallery-link .container-4 p {
+  top: 40%;
+  left: 35%;
+}
+
+.gallery-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-link .container-1 img {
+  object-position: 60%;
+}
+
+.gallery-link .container-2 img {
+  object-position: 55%;
+}
+
+.gallery-link .container-3 img {
+  object-position: left top;
+}
+
+.gallery-link .container-4 {
+  filter: none;
+}
+
+.gallery-link .container-1:hover, .container-2:hover, .container-3:hover, .container-4:hover {
+  filter: none; 
+} 
+
+/* Catogory Gallery end ------------------------------*/
+
+
+/* Accessory Gallery Start ----------------------------*/
+.accessories h2 {
+  text-align: center;
+  height: 3rem;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+}
+
+.accessories-links {
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+
+  row-gap: 2rem;
+  column-gap: 2rem;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  justify-content: center;
+}
+
+.accessories-links img {
+  width: 5rem;
+  height: 10rem;
+  object-fit: cover;
+  object-position: 60%;
+}
+
+.accessories-links .item-1, .item-2, .item-3 {
+  background-color: rgb(41, 43, 43);
+  position: relative;
+}
+
+.accessories-links .item-1 p, .item-2 p, .item-3 p {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  color: aliceblue;
+  
+  top: 40%;
+  left: 35%;
+}
+
+.accessories-links .item-1:hover {
+  background-color: rgb(25, 43, 71);
+} 
+
+.accessories-links .item-2:hover {
+  background-color: rgb(30, 75, 65);
+} 
+
+.accessories-links .item-3:hover {
+  background-color: rgb(86, 61, 37);
+} 
+/* Accessory Gallery Ends ----------------------------*/
+
+
+/* Designer info card Start --------------------------*/
